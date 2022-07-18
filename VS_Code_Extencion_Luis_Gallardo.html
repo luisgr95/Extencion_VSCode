@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README-español.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="trabajo-creaci%C3%B3n-de-una-extensi%C3%B3n-para-visual-studio-code">Trabajo: Creación de una extensión para Visual Studio Code</h1>
+<p><em>Acá va un párrafo que describa lo que es el proyecto</em></p>
+<h2 id="objetivo-%F0%9F%9A%80">Objetivo 🚀</h2>
+<p><em>Practicar JavaSctript y de paso conocer TypeScript y aplicarlo de una forma novedosa y de una forma usada hoy en dia.</em></p>
+<h2 id="descripcion">Descripcion</h2>
+<p>Visual Studio Code se esta convirtiendo en un editor de codigo muy bueno gracias a su cantidad de <strong>Extenciones</strong>. En este caso se aplicara la creacion de una extencion usando TypeScript y algunas Librerias de NodeJS.</p>
+<h2 id="pre-requisitos-%F0%9F%93%8B">Pre-requisitos 📋</h2>
+<p><em>Que cosas necesitas para instalar el software y como instalarlas.</em></p>
+<ul>
+<li><strong>Visual Studio Code</strong> // Es el editor de codigo del cual anteriormente se hablo.</li>
+<li><strong>NodeJS</strong> // Se usara para descargar paquetes de sus repositorios como lo son:
+<ul>
+<li><strong>Yeoman</strong> : Es una aplicacion para generar el codigo del esqueleto inicial.</li>
+<li><strong>generator-code</strong> : Es uno de los generadores para Yeoman y nos servira para comenzar el desarrollo de la extencion para VS Code.</li>
+</ul>
+</li>
+</ul>
+<h2 id="instalaci%C3%B3n--iniciaci%C3%B3n%F0%9F%94%A7">Instalación &amp; Iniciación🔧</h2>
+<p><em>Podemos Instalar todo esto desde la terminal:</em></p>
+<pre class="hljs"><code><div>npm install -g yo generator-code typescript
+</div></code></pre>
+<p><em>Una vez instalado ejecutar en terminal:</em></p>
+<pre class="hljs"><code><div>yo code
+</div></code></pre>
+<p><em>Aqui Seleccionamos New Extension (TypeScript).</em>
+<img src="https://i.postimg.cc/fTVRfpd0/Yoco.png" alt="Sourcefile" title="Aqui Seleccionamos New Extension (TypeScript)">
+<em>Luego Agregar nombre, nombre de extencion, descripcion, etc...</em>
+<img src="https://i.postimg.cc/gk1kSsyt/yoco2.png" alt="SF2">
+<em>Y por ultimo se nos abrira nuestro VS Code con el projecto de extención.</em>
+<img src="https://i.postimg.cc/0ym5LSck/yoco3.png" alt="SF3"></p>
+<h2 id="editando-el-codigo-%E2%9C%8D">Editando el codigo ✍</h2>
+<p><em>Nuestro Codigo a Modificar(Codigo de ejemplo) lo encontraremos en la carpeta de <strong>src/extencion.ts</strong>.</em></p>
+<p><em>por otro lado las propiedades de la extencion las modificaremos en el archivo <strong>package.json</strong> en la raiz del projecto.</em></p>
+<hr>
+<p><em>En el archivo <strong>package.json</strong> se editara lo siguiente</em></p>
+<pre class="hljs"><code><div>{
+    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"gapline"</span>, <span class="hljs-comment">//Aqui se encuentra el nombre de la Extencion</span>
+    <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"Line Gapper"</span>, <span class="hljs-comment">//Este es el nombre del projecto</span>
+    <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Esta extencion es un ejemplo de la asignatura de clinte servider en la tarea de crear una extencion para VSCode"</span>, <span class="hljs-comment">//Aqui se encuentra la descripcion del projecto</span>
+    <span class="hljs-attr">"version"</span>: <span class="hljs-string">"0.0.1"</span>,
+    <span class="hljs-attr">"engines"</span>: {
+        <span class="hljs-attr">"vscode"</span>: <span class="hljs-string">"^1.67.0"</span>
+    },
+    <span class="hljs-attr">"categories"</span>: [
+        <span class="hljs-string">"Other"</span>
+    ],
+    <span class="hljs-attr">"activationEvents"</span>: [
+        <span class="hljs-string">"onCommand:extension.gapline"</span> <span class="hljs-comment">// aqui llamaremos a la extencion para que no cargue tanto en memoria solo cuando se ocupe</span>
+    ],
+    <span class="hljs-attr">"main"</span>: <span class="hljs-string">"./out/extension.js"</span>,
+    <span class="hljs-attr">"contributes"</span>: {
+        <span class="hljs-attr">"commands"</span>: [{  <span class="hljs-comment">//Aqui se llamaran a los comandos y el nombre de cada uno.</span>
+            <span class="hljs-attr">"command"</span>: <span class="hljs-string">"extension.gapline"</span>, <span class="hljs-comment">//Con este usaremos la funcion</span>
+            <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Gapeline"</span> <span class="hljs-comment">//Asi es como lo encontraremos en la consola de proyectos</span>
+        }]
+    },
+    <span class="hljs-attr">"scripts"</span>: {
+        <span class="hljs-attr">"vscode:prepublish"</span>: <span class="hljs-string">"npm run compile"</span>,
+        <span class="hljs-attr">"compile"</span>: <span class="hljs-string">"tsc -p ./"</span>,
+        <span class="hljs-attr">"watch"</span>: <span class="hljs-string">"tsc -watch -p ./"</span>,
+        <span class="hljs-attr">"pretest"</span>: <span class="hljs-string">"npm run compile &amp;&amp; npm run lint"</span>,
+        <span class="hljs-attr">"lint"</span>: <span class="hljs-string">"eslint src --ext ts"</span>,
+        <span class="hljs-attr">"test"</span>: <span class="hljs-string">"node ./out/test/runTest.js"</span>
+    },
+    <span class="hljs-attr">"devDependencies"</span>: {
+        <span class="hljs-attr">"@types/vscode"</span>: <span class="hljs-string">"^1.67.0"</span>,
+        <span class="hljs-attr">"@types/glob"</span>: <span class="hljs-string">"^7.2.0"</span>,
+        <span class="hljs-attr">"@types/mocha"</span>: <span class="hljs-string">"^9.1.1"</span>,
+        <span class="hljs-attr">"@types/node"</span>: <span class="hljs-string">"14.x"</span>,
+        <span class="hljs-attr">"@typescript-eslint/eslint-plugin"</span>: <span class="hljs-string">"^5.21.0"</span>,
+        <span class="hljs-attr">"@typescript-eslint/parser"</span>: <span class="hljs-string">"^5.21.0"</span>,
+        <span class="hljs-attr">"eslint"</span>: <span class="hljs-string">"^8.14.0"</span>,
+        <span class="hljs-attr">"glob"</span>: <span class="hljs-string">"^8.0.1"</span>,
+        <span class="hljs-attr">"mocha"</span>: <span class="hljs-string">"^9.2.2"</span>,
+        <span class="hljs-attr">"typescript"</span>: <span class="hljs-string">"^4.6.4"</span>,
+        <span class="hljs-attr">"@vscode/test-electron"</span>: <span class="hljs-string">"^2.1.3"</span>
+    }
+}
+</div></code></pre>
+<p>Por otro lado esta es la Extenvion Gapper Line.</p>
+<pre class="hljs"><code><div><span class="hljs-meta">'use strict'</span>; <span class="hljs-comment">// Invoca al modo estricto</span>
+<span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> vscode <span class="hljs-keyword">from</span> <span class="hljs-string">'vscode'</span>; <span class="hljs-comment">//Importa el modulo de VSCODE</span>
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">activate</span>(<span class="hljs-params">context: vscode.ExtensionContext</span>) </span>{	<span class="hljs-comment">//Crea la Funcion para la extencion y la retorna publica para otras api</span>
+    <span class="hljs-keyword">let</span> disposable = vscode.commands.registerCommand(<span class="hljs-string">'extension.gapline'</span>, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> { <span class="hljs-comment">//Crea el comando para ejecutar</span>
+        <span class="hljs-keyword">var</span> editor = vscode.window.activeTextEditor; <span class="hljs-comment">//esta guardando el editor de texto y lo guarda en la variable editor</span>
+        <span class="hljs-keyword">if</span> (!editor) { <span class="hljs-keyword">return</span>; } <span class="hljs-comment">//Valida la funcion editor</span>
+        <span class="hljs-keyword">var</span> selection = editor.selection; <span class="hljs-comment">//Toma todo lo que esta presente en el GUI</span>
+        <span class="hljs-keyword">var</span> text = editor.document.getText(selection); <span class="hljs-comment">//Toma el texto seleccionado y lo almacena en la variable text	</span>
+        vscode.window.showInputBox({ prompt: <span class="hljs-string">'Lineas?'</span> }).then(<span class="hljs-function"><span class="hljs-params">value</span> =&gt;</span> { <span class="hljs-comment">//Abre un recuadro donde le pregunta al usuario que introdusca</span>
+            <span class="hljs-keyword">let</span> numberOfLines = +value; <span class="hljs-comment">//Toma el numero de lineas</span>
+            <span class="hljs-keyword">var</span> textInChunks: <span class="hljs-built_in">Array</span>&lt;<span class="hljs-built_in">string</span>&gt; = [];<span class="hljs-comment">//Crea una var para almacenar el arreglo</span>
+            text.split(<span class="hljs-string">'\n'</span>).forEach(<span class="hljs-function">(<span class="hljs-params">currentLine: <span class="hljs-built_in">string</span>, lineIndex</span>) =&gt;</span> { <span class="hljs-comment">//separa el texto con espacios</span>
+                textInChunks.push(currentLine); <span class="hljs-comment">//Manda el texto a determinada posicion</span>
+                <span class="hljs-keyword">if</span> ((lineIndex+<span class="hljs-number">1</span>) % numberOfLines === <span class="hljs-number">0</span>) {textInChunks.push(<span class="hljs-string">''</span>);} <span class="hljs-comment">//Valida el push de las lineas mandadas</span>
+            });
+            text = textInChunks.join(<span class="hljs-string">'\n'</span>); <span class="hljs-comment">// Agrega todos los elementos a la cadena</span>
+			editor.edit(<span class="hljs-function">(<span class="hljs-params">editBuilder</span>) =&gt;</span> { <span class="hljs-comment">// Asocia el editor de texto</span>
+                <span class="hljs-keyword">var</span> range = <span class="hljs-keyword">new</span> vscode.Range( <span class="hljs-comment">//crea el rango del editor de codigo</span>
+                    selection.start.line, <span class="hljs-number">0</span>,  <span class="hljs-comment">//de donde va empezar el rango</span>
+                    selection.end.line, <span class="hljs-comment">//donde termina el rango</span>
+                    editor.document.lineAt(selection.end.line).text.length <span class="hljs-comment">//alinea el texto</span>
+                );
+                editBuilder.replace(range, text); <span class="hljs-comment">//Centro el nuevo texto con el nuevo rango</span>
+            });
+        });
+    });
+    context.subscriptions.push(disposable);<span class="hljs-comment">//deside si el contenido se puede añadir </span>
+}
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">deactivate</span>(<span class="hljs-params"></span>) </span>{ } <span class="hljs-comment">//sirve para realizar una limpieza</span>
+</div></code></pre>
+<h2 id="ejecutando-las-pruebas-%E2%9A%99%EF%B8%8F">Ejecutando las pruebas ⚙️</h2>
+<p><em>Para ejecutar la extencion es necesario precionar la Tecla <strong>F5</strong> el cual nos abrira otra ventana de VS Code</em>
+<img src="https://i.postimg.cc/JnLFJ3M2/f51.png" alt="SCF1" title="Al precionar el F5 se despliega otra ventana de visual">
+<em>Una vez que se nos abrio la ventana nueva crear un documento de texto plano.</em>
+<img src="https://i.postimg.cc/R0F5hLCQ/nf1.png" alt="SCF2" title="Aqui se abrio el doc de texto plano">
+<em>Despues precionar las teclas <strong>Ctrl + Mayus + P</strong> el cual nos abrira un TextBox en el cual se pone el nombre de la extención.</em>
+<img src="https://i.postimg.cc/sx5bqnKy/nf2.png" alt="SCF3" title="Aqui ya aparece la ComboBox">
+<em>Una vez ya seleccionada la extencion te pedira el numero de lineas.</em>
+<img src="https://i.postimg.cc/ydgMX6ZD/nf3.png" alt="SCF4" title="Aqui se puso como ejemplo #1"></p>
+<h3 id="y-las-pruebas-de-estilo-de-codificaci%C3%B3n-%E2%8C%A8%EF%B8%8F">Y las pruebas de estilo de codificación ⌨️</h3>
+<p><em>Una vez dado enter remplazara las lines por bloques en blanco.</em>
+<img src="https://i.postimg.cc/C13WvyGm/nf4.png" alt="SCF5" title="Aqui esta el resultado"></p>
+<h2 id="despliegue-%F0%9F%93%A6">Despliegue 📦</h2>
+<p><em>En caso de que el programa no funcione verificar el archivo <em><strong>package.json</strong></em>  y verificar nombres y comandos esten de forma correcta y que correspondan con la funcion descrita en el TS</em></p>
+<h2 id="construido-con-%F0%9F%9B%A0%EF%B8%8F">Construido con 🛠️</h2>
+<p><em>Menciona las herramientas que utilizaste para crear tu proyecto</em></p>
+<ul>
+<li><a href="https://code.visualstudio.com/">Visual Studio Code</a> - El IDE Usado</li>
+<li><a href="https://code.visualstudio.com/docs/editor/extension-gallery">Documentacion de Extenciones VS Code</a> - Encuentras la documentacion de extenciones</li>
+<li><a href="http://www.typescriptlang.org/">TypeScript</a> - Lenguaje basado en JavaScript de Microsoft</li>
+<li><a href="https://nodejs.org/en/download/current/">NodeJS</a> - Motor de JavaScript</li>
+<li><a href="https://yeoman.io/">Yeoman</a> - Aplicacion para generar el esqueleto de un proyecto web</li>
+<li><a href="https://www.npmjs.com/package/generator-code">Generator-Code</a> - Es uno de los generadores para Yeoman y sirve para comenzar el desarrollo de una extencion de VS Code</li>
+</ul>
+<h2 id="licencia-%F0%9F%93%84">Licencia 📄</h2>
+<p>Este practica fue proporcionada por la Universidad de la Rioja para la materia de Cliente Servidor.</p>
+<hr>
+<p>⌨️ con ❤️ por <a href="https://github.com/luisgr95">Luisgr95</a> 😊</p>
+
+</body>
+</html>
